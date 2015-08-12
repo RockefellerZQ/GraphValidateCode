@@ -6,10 +6,18 @@
 
 背景色也可以随机生成
 ```
-	_needGenerateBackgroundColor = YES;
+validateCode.needGenerateBackgroundColor = YES;
 ```
 
 障碍线的条数根据条件控制
 ```
-_maxLineNumbers = 10;
+validateCode.maxLineNumbers = 10;
+```
+判断用户输入是否与验证码一致
+```
+if ([someTextField.text isEqualString:graphValidateCode.validateCode]) {
+// 下一步动作
+} else {
+// 验证码输入不一致的提示
+}
 ```
