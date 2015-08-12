@@ -10,7 +10,6 @@
 
 @interface ZQGraphValidateCode ()
 
-@property (nonatomic, readonly) NSArray *fontArray;
 
 @end
 
