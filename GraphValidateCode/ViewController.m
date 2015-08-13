@@ -19,13 +19,8 @@
     [super viewDidLoad];
     ZQGraphValidateCode *validateCode = [[ZQGraphValidateCode alloc] initWithFrame:CGRectMake(100, 100, 80, 40)];
     [self.view addSubview:validateCode];
-    [validateCode addTarget:self action:@selector(validateCodeChanged:) forControlEvents:UIControlEventValueChanged];
+    validateCode = nil;
     // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)validateCodeChanged:(ZQGraphValidateCode *)sender
-{
-    NSLog(@"the validate code before change:%@", sender.validateCode);
 }
 
 - (void)didReceiveMemoryWarning {

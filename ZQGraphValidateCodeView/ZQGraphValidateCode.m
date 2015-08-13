@@ -38,6 +38,9 @@
     self.backgroundColor = [UIColor whiteColor];
     _needGenerateBackgroundColor = NO;
     _maxLineNumbers = 6;
+    UITapGestureRecognizer *tapgesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(setNeedsDisplay)];
+    [self addGestureRecognizer:tapgesture];
+    tapgesture = nil;
 }
 
 - (void)drawRect:(CGRect)rect
@@ -158,12 +161,6 @@
 - (int)generateRandomLinePositionWithNumber:(int)number
 {
     return arc4random() % number;
-}
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    [self setNeedsDisplay];
-    [self sendActionsForControlEvents:UIControlEventValueChanged];
 }
 
 @end
